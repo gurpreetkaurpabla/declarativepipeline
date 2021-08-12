@@ -38,6 +38,11 @@ pipeline{
                 archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
             }
         }
+        stage('Notify'){
+            steps {
+                sh 'echo notify'
+            }
+        }
     }
 
 
