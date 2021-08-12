@@ -4,6 +4,7 @@ pipeline {
     stage('compile') {
       steps {
         sh 'mvn compile'
+        withMaven(jdk: 'jdk11', maven: 'maven installer')
       }
     }
 
